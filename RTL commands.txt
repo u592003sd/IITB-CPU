@@ -1,0 +1,58 @@
+vsim work.iitb_cpu
+add wave -position insertpoint  \
+sim:/iitb_cpu/clock \
+sim:/iitb_cpu/Reset \
+sim:/iitb_cpu/Mem_Ext_WR \
+sim:/iitb_cpu/S_instruc
+add wave -position insertpoint  \
+sim:/iitb_cpu/S_T2_out
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T2/DataIn \
+sim:/iitb_cpu/My_Datapath/T2/Data
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T2/DataIn \
+sim:/iitb_cpu/My_Datapath/T2/Data
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T2/DataOut
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T1/DataOut
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T3/DataOut
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T4/DataOut
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/T4/DataOut
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/Reg_File/Data
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/Reg_File/Data
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_FSM/State
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/Reg_File/A1 \
+sim:/iitb_cpu/My_Datapath/Reg_File/A2 \
+sim:/iitb_cpu/My_Datapath/Reg_File/A3 \
+sim:/iitb_cpu/My_Datapath/Reg_File/D3 \
+sim:/iitb_cpu/My_Datapath/Reg_File/PC \
+sim:/iitb_cpu/My_Datapath/Reg_File/clock \
+sim:/iitb_cpu/My_Datapath/Reg_File/Write_Enable \
+sim:/iitb_cpu/My_Datapath/Reg_File/D1 \
+sim:/iitb_cpu/My_Datapath/Reg_File/D2 \
+sim:/iitb_cpu/My_Datapath/Reg_File/Data
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_FSM/Z_flag \
+sim:/iitb_cpu/My_FSM/C_flag
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_FSM/Flag
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/mem/Data
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/mem/Mem_Add \
+sim:/iitb_cpu/My_Datapath/mem/Mem_Data_In \
+sim:/iitb_cpu/My_Datapath/mem/Mem_Data_Out
+add wave -position insertpoint  \
+sim:/iitb_cpu/My_Datapath/mem_WR_Internal
+
+force -freeze sim:/iitb_cpu/clock 1 0, 0 {50 ps} -r 100
+force -freeze sim:/iitb_cpu/Reset 0 0
+force -freeze sim:/iitb_cpu/Mem_Ext_WR 0 0

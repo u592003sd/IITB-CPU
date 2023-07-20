@@ -1,0 +1,2 @@
+-Construction of Fibonacci Series using instructions in the little computer architecture.
+-Details of the program in the fibonacci_program.jpg

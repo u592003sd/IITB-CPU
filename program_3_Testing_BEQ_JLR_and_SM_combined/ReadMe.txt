@@ -1,0 +1,2 @@
+-Creation of a tricky instruction set to check the proper working of the Little Computer Architecture.
+-Refer the pen_paper.jpg
